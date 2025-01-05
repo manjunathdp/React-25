@@ -23,16 +23,19 @@ export default function RandomColor() {
     setColor(`rgb(${r},${g},${b})`);
   }
 
-  useEffect(()=>{
-    if (colorType==='rgb') {
-        handelRgbColor();
+  useEffect(() => {
+    if (colorType === "rgb") {
+      handelRgbColor();
     } else {
-        handelHexColor();
+      handelHexColor();
     }
-  },[colorType])
+  }, [colorType]);
 
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
+      <h1>
+        Project 2 <u>Random Color Generator</u>
+      </h1>
       <button onClick={() => setColorType("hex")}>Hex Color Mode</button>
       <button onClick={() => setColorType("rgb")}>RGB Color Mode</button>
       <button
@@ -44,7 +47,7 @@ export default function RandomColor() {
       </button>
       <div
         style={{
-          height: "400px",
+          height: "200px",
           width: "400px",
           background: color,
         }}
@@ -54,7 +57,6 @@ export default function RandomColor() {
             color: "#fff",
             display: "flex",
             alignItems: "center",
-            marginTop: "50px",
             fontSize: "20px",
             flexDirection: "column",
           }}

@@ -27,6 +27,9 @@ export default function Accordion() {
   console.log("multiple: ", multiple);
   return (
     <div>
+      <h1>
+        Project 1 <u>Accordion</u>
+      </h1>
       <button onClick={() => setEnableMultiselect(!enableMultiselect)}>
         Enable Multi Selection
       </button>
